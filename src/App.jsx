@@ -1,16 +1,15 @@
 import Navbar from "./components/Navbar"
-//import Hero from "./components/Hero"
+import Hero from "./components/Hero"
 import Card from "./components/Card"
 import data from "./data"
 
 export default function App() {
-    // <Hero />
 const cards = data.map(item => {
 return (
     
     <Card 
         key={item.id}
-        item={item}
+        {...item}
     />
 )
 })        
@@ -18,7 +17,7 @@ return (
 return (
 <div>
     <Navbar />
-    
+    <Hero />
     <section className="cards-list">
         {cards}
     </section>
