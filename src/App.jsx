@@ -7,14 +7,10 @@ export default function App() {
     // <Hero />
 const cards = data.map(item => {
 return (
-    // eslint-disable-next-line react/jsx-key
+    
     <Card 
-        img={item.coverImg}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        title={item.title}
-        price={item.price}
+        key={item.id}
+        item={item}
     />
 )
 })        
